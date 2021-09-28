@@ -96,7 +96,11 @@ extension ViewController: MCSessionDelegate {
         print("received data: \(data)")
         if let move = String(data: data, encoding: .utf8) {
             let moveArr = move.components(separatedBy: ":")
-            print(moveArr)
+            if let fromCol: Int = Int(moveArr[0]), let fromRow = Int(moveArr[1]), let toCol = Int(moveArr[2]), let toRow = Int(moveArr[3]) {
+                DispatchQueue.main.async {
+                    self.updateMove(fromCol: fromCol, fromRow: fromRow, toCol: toCol, toRow: toRow)
+                }
+            }
         }
     }
     
@@ -117,7 +121,16 @@ extension ViewController: MCSessionDelegate {
 
 extension ViewController: ChessDelegate {
     func movePiece(fromCol: Int, fromRow: Int, toCol: Int, toRow: Int) {
-        chessEngine.movePiece(fromCol: fromCol, fromRow: fromRow, toCol: toCol, toRow: toRow)
+       updateMove(fromCol: fromCol, fromRow: fromRow, toCol: toCol, toRow: toRow)
+        
+        let move: String = "\(fromCol):\(fromRow):\(toCol):\(toRow)"
+        if let data = move.data(using: .utf8) {
+           try? session.send(data, toPeers: session.connectedPeers, with: .reliable)
+        }
+    }
+    
+    func updateMove(fromCol: Int, fromRow: Int, toCol: Int, toRow: Int)  {
+    chessEngine.movePiece(fromCol: fromCol, fromRow: fromRow, toCol: toCol, toRow: toRow)
         boardView.shadowPieces = chessEngine.pieces
         boardView.setNeedsDisplay()
         
@@ -127,11 +140,6 @@ extension ViewController: ChessDelegate {
             infoLabel.text = "White"
         } else {
             infoLabel.text = "Black"
-        }
-        
-        let move: String = "\(fromCol):\(fromRow):\(toCol):\(toRow)"
-        if let data = move.data(using: .utf8) {
-           try? session.send(data, toPeers: session.connectedPeers, with: .reliable)
         }
     }
     
