@@ -20,7 +20,7 @@ struct ChessEngine {
             return
         }
         
-     // удаление съеденых шахмат и невозможность поставить фигуру на фигуру
+     // удаление съеденых шахмат
         if let target = pieceAt(col: toCol, row: toRow) {
             if target.isWhite == candiddate.isWhite {
             return
@@ -59,7 +59,7 @@ struct ChessEngine {
     }
     
     
-    // фигуры на доске
+    //расстановка фигур на доске
     mutating func initializeGame(){
         whitesTurn = true
         

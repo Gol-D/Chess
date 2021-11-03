@@ -1,0 +1,10 @@
+/* 
+  infoPlist.strings
+  Chess
+
+  Created by Daniel Golovin on 28.09.2021.
+  
+*/
+
+"CFBundleDisplayName" = "GT Chess";
+"NCHumanRadableCopiright" = "Daniel Golovin on 2021";

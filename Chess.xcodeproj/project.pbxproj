@@ -12,7 +12,6 @@
 		DE0CF45726FBACAD000B7740 /* ChessEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE0CF45626FBACAD000B7740 /* ChessEngine.swift */; };
 		DE0CF45926FBC259000B7740 /* ChessDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE0CF45826FBC259000B7740 /* ChessDelegate.swift */; };
 		DE1C667F26FB3991001062D5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1C667E26FB3991001062D5 /* AppDelegate.swift */; };
-		DE1C668126FB3991001062D5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1C668026FB3991001062D5 /* SceneDelegate.swift */; };
 		DE1C668326FB3991001062D5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1C668226FB3991001062D5 /* ViewController.swift */; };
 		DE1C668626FB3991001062D5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE1C668426FB3991001062D5 /* Main.storyboard */; };
 		DE1C668826FB3992001062D5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE1C668726FB3992001062D5 /* Assets.xcassets */; };
@@ -20,6 +19,7 @@
 		DE1C669626FB3992001062D5 /* ChessTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1C669526FB3992001062D5 /* ChessTests.swift */; };
 		DE1C66A126FB3992001062D5 /* ChessUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1C66A026FB3992001062D5 /* ChessUITests.swift */; };
 		DE1C66AF26FB39DA001062D5 /* BoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1C66AE26FB39DA001062D5 /* BoardView.swift */; };
+		DEC6B066270370240036E072 /* infoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DEC6B065270370240036E072 /* infoPlist.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,7 +46,6 @@
 		DE0CF45826FBC259000B7740 /* ChessDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChessDelegate.swift; sourceTree = "<group>"; };
 		DE1C667B26FB3991001062D5 /* Chess.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Chess.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE1C667E26FB3991001062D5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DE1C668026FB3991001062D5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		DE1C668226FB3991001062D5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		DE1C668526FB3991001062D5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DE1C668726FB3992001062D5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -59,6 +58,7 @@
 		DE1C66A026FB3992001062D5 /* ChessUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChessUITests.swift; sourceTree = "<group>"; };
 		DE1C66A226FB3992001062D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DE1C66AE26FB39DA001062D5 /* BoardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardView.swift; sourceTree = "<group>"; };
+		DEC6B065270370240036E072 /* infoPlist.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = infoPlist.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,7 +111,6 @@
 			children = (
 				DE1C667E26FB3991001062D5 /* AppDelegate.swift */,
 				DE0CF45826FBC259000B7740 /* ChessDelegate.swift */,
-				DE1C668026FB3991001062D5 /* SceneDelegate.swift */,
 				DE1C66AE26FB39DA001062D5 /* BoardView.swift */,
 				DE0CF45626FBACAD000B7740 /* ChessEngine.swift */,
 				DE0CF45426FBABC9000B7740 /* ChessPiece.swift */,
@@ -121,6 +120,7 @@
 				DE1C668726FB3992001062D5 /* Assets.xcassets */,
 				DE1C668926FB3992001062D5 /* LaunchScreen.storyboard */,
 				DE1C668C26FB3992001062D5 /* Info.plist */,
+				DEC6B065270370240036E072 /* infoPlist.strings */,
 			);
 			path = Chess;
 			sourceTree = "<group>";
@@ -250,6 +250,7 @@
 				DE1C668826FB3992001062D5 /* Assets.xcassets in Resources */,
 				DE0AB2D126FE05B000058FAF /* ChessClick.wav in Resources */,
 				DE1C668626FB3991001062D5 /* Main.storyboard in Resources */,
+				DEC6B066270370240036E072 /* infoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,7 +281,6 @@
 				DE1C66AF26FB39DA001062D5 /* BoardView.swift in Sources */,
 				DE1C667F26FB3991001062D5 /* AppDelegate.swift in Sources */,
 				DE0CF45526FBABC9000B7740 /* ChessPiece.swift in Sources */,
-				DE1C668126FB3991001062D5 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -386,7 +386,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -441,7 +441,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
